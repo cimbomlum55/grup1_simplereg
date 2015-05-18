@@ -5,7 +5,11 @@
  */
 package tr.gov.ptt.gr1_simplereq.mb;
 
+
+
 import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
 import tr.gov.ptt.gr1_simplereq.dto.User;
 
@@ -13,6 +17,8 @@ import tr.gov.ptt.gr1_simplereq.dto.User;
  *
  * @author Administrator
  */
+@ManagedBean
+@RequestScoped
 public class UserController {
     
     private User kullanici;
