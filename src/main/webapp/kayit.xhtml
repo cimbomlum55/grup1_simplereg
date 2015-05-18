@@ -13,7 +13,36 @@
             
             <p:panel  header="Kayıt Formu" style="width: 500px">
                 
+                <p:messages/>
                 
+                <p:panelGrid columns="2">
+                    
+                    <p:outputLabel value="Kullanıcı Adı" />
+                    <p:inputText value="#{userController.kullanici.kullaniciAdi}"/>
+                    
+                    <p:outputLabel value="Parola" />
+                    <p:inputText value="#{userController.kullanici.parola}"/>
+                    
+                    <p:outputLabel value="Adı:" />
+                    <p:inputText value="#{userController.kullanici.ad}"/>
+                    
+                     <p:outputLabel value="Soyadı:" />
+                    <p:inputText value="#{userController.kullanici.soyad}"/>
+                    
+                     <p:outputLabel value="Email:" />
+                    <p:inputText value="#{userController.kullanici.email}"/>
+                    
+                     <p:outputLabel value="Gsm:" />
+                    <p:inputText value="#{userController.kullanici.cepTel }"/>
+                    
+                    <p:outputLabel value="Yas:" />
+                    <p:inputMask value="#{userController.kullanici.yas}" mask="9?99"/>
+                    <p:outputLabel value=" " />
+                    <p:commandButton action="#{userController.kayit()}" value="Kayıt"
+                                     update="kayitForm"/>
+                    
+                    
+                </p:panelGrid>
                 
             </p:panel>  
             
